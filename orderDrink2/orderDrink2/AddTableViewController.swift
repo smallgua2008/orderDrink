@@ -62,10 +62,12 @@ class AddTableViewController: UITableViewController {
     
     func updDataToSheet() {
         var isFind = false
-        for i in 0...keys.count-1 {
-            if self.yourNameText.text == keys[i] {
-                isFind = true
-                break
+        if(self.keys.count>0) {
+            for i in 0...self.keys.count-1 {
+                if self.yourNameText.text == self.keys[i] {
+                    isFind = true
+                    break
+                }
             }
         }
         
